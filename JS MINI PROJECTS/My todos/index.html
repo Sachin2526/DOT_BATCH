@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todos</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div class="App">
+    <h1>My Todos</h1>
+
+    <div class="todo-wrapper">
+        <!-- Todo Input Form -->
+        <div class="todo-input">
+			
+            <div class="todo-input-item">
+                <label for="newTitle">Title</label>
+                <input 
+					type="text" 
+					id="newTitle" 
+					placeholder="What's the task title?">
+            </div>
+			
+			
+            <div class="todo-input-item">
+                <label for="newDescription">Description</label>
+                <input
+					 type="text" 
+					 id="newDescription" 
+					 placeholder="What's the task description?">
+            </div>
+			
+            <div class="todo-input-item">
+                <button id="addTodo" class="primaryBtn">Add</button>
+            </div>
+        </div>
+		
+		
+
+        <!-- Filter Buttons -->
+        <div class="btn-area">
+            <button id="showTodos" class="secondaryBtn active">Todo</button>
+            <button id="showCompleted" class="secondaryBtn">Completed</button>
+        </div>
+
+        <!-- Todo List -->
+        <div class="todo-list" id="todoList">
+            <!-- Dynamic Todo Items will go here -->
+            <div class="todo-list-item">
+                <div>
+                    <h3>Sample Task</h3>
+                    <p>This is a sample description.</p>
+                </div>
+                <div>
+                    <span class="icon">🗑️</span>
+                    <span class="check-icon">✔️</span>
+                    <span class="icon">✏️</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Completed List -->
+        <div class="todo-list" id="completedList" style="display:none;">
+            <!-- Dynamic Completed Todo Items will go here -->
+            <div class="todo-list-item">
+                <div>
+                    <h3>Completed Task</h3>
+                    <p>This task is completed.</p>
+                </div>
+                <div>
+                    <span class="icon">🗑️</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
+
+</body>
+</html>
